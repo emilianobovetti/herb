@@ -1,0 +1,191 @@
+/*
+ * z-depths from *MaterializeCSS*
+ *   https://github.com/Dogfalo/materialize
+ *
+ * z-depth: 1
+ * box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14),0 1px 5px 0 rgba(0,0,0,0.12),0 3px 1px -2px rgba(0,0,0,0.2);
+ *
+ * z-depth: 2
+ * box-shadow: 0 4px 5px 0 rgba(0,0,0,0.14),0 1px 10px 0 rgba(0,0,0,0.12),0 2px 4px -1px rgba(0,0,0,0.3);
+ *
+ * z-depth: 3
+ * box-shadow: 0 6px 10px 0 rgba(0,0,0,0.14),0 1px 18px 0 rgba(0,0,0,0.12),0 3px 5px -1px rgba(0,0,0,0.3);
+ *
+ * z-depth: 4
+ * box-shadow: 0 8px 10px 1px rgba(0,0,0,0.14),0 3px 14px 2px rgba(0,0,0,0.12),0 5px 5px -3px rgba(0,0,0,0.3);
+ *
+ * z-depth: 5
+ * box-shadow: 0 16px 24px 2px rgba(0,0,0,0.14),0 6px 30px 5px rgba(0,0,0,0.12),0 8px 10px -5px rgba(0,0,0,0.3);
+ *
+ */
+
+/*
+ * Base
+ */
+* {
+  font-size: 14pt;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+label {
+  color: #34495e;
+}
+
+.hidden {
+  display: none;
+}
+
+.clickable {
+  color: #6FBEF3;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.display-block {
+  display: block;
+}
+
+.float-left {
+  float: left;
+}
+
+/*
+ * Form
+ */
+.pure-form label {
+  font-weight: bold;
+  display: block;
+}
+
+.pure-form textarea,
+.pure-form input[type] {
+  border: 2px solid #ddd;
+  box-shadow: none;
+}
+
+.pure-form input,
+.pure-form textarea {
+  margin: 10px 0;
+}
+
+.pure-form input.invalid {
+  border: 2px solid #d55;
+}
+
+.pure-form button {
+  margin-right: 15px;
+}
+
+/*
+ * Table
+ */
+.pure-table {
+  border-collapse: initial;
+  width: 100%;
+}
+
+.pure-table .active {
+  height: 50px;
+}
+
+.pure-table .active td {
+  border: none;
+}
+
+.pure-table .pure-control-group .pure-button {
+  border: 1px solid #929bac;
+  background: #f6f7f9;
+  margin: 0 20px;
+}
+
+/*
+ * Menu
+ */
+.home-menu {
+  padding: 0.5em;
+  text-align: left;
+  background-color: #2d3e50;
+  /* z-depth: 1 */
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14),0 1px 5px 0 rgba(0,0,0,0.12),0 3px 1px -2px rgba(0,0,0,0.2);
+}
+
+
+.home-menu .pure-menu-selected li {
+  color: white;
+}
+
+.home-menu li * {
+  text-decoration: none;
+  padding: .5em 1em;
+  color: #6FBEF3;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.home-menu li:hover,
+.home-menu li:focus {
+  background: none;
+  border: none;
+  color: #AECFE5;
+}
+
+/*
+ * Content
+ */
+.content-wrapper {
+  position: relative;
+  top: 59px;
+  padding: 1em 1em 3em;
+}
+
+/*
+ * Alert
+ */
+.alert {
+  padding: .7em 1em;
+}
+
+.alert-danger {
+  background-color: #dc6464;
+}
+
+.alert-success {
+  background-color: #92e084;
+}
+
+/*
+ * Checkbox
+ */
+input[type="checkbox"] {
+  display: none;
+}
+
+.checkmark {
+  position: relative;
+  padding: 15px 15px 15px 40px;
+  cursor: pointer;
+  float: left;
+}
+
+.checkmark:before {
+  content: '\f10c'; /* circle outline */
+  display: block;
+  position: absolute;
+  top: 11px;
+  left: 10px;
+  font: 1.5em 'FontAwesome';
+}
+
+input:checked + .checkmark::before {
+  content: '\f058'; /* circle checkmark */
+}
+
+input:disabled + .checkmark::before {
+  color: #aaa;
+}

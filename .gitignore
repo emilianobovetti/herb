@@ -1,0 +1,9 @@
+yarn-error.log
+settings.json
+node_modules
+database
+build
+dist
+
+elm/tests/elm-stuff
+elm/elm-stuff

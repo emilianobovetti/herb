@@ -1,0 +1,53 @@
+{
+    "name": "herb",
+    "author": "emilianobovetti",
+    "license": "Apache-2.0",
+    "version": "0.1.1",
+    "description": "A minimal Electron management app",
+    "repository": "https://github.com/emilianobovetti/herb.git",
+    "main": "electron.js",
+    "scripts": {
+        "postinstall": "./node_modules/.bin/electron-builder install-app-deps",
+        "electron": "./node_modules/.bin/electron .",
+        "linux-dist": "./node_modules/.bin/electron-builder --linux",
+        "windows-dist": "./node_modules/.bin/electron-builder --windows",
+        "pack": "./node_modules/.bin/electron-builder --dir"
+    },
+    "dependencies": {
+        "pouchdb": "^6.3.4",
+        "purecss": "^1.0.0",
+        "stateless-maybe-js": "^1.0.2"
+    },
+    "devDependencies": {
+        "electron": "^1.7.9",
+        "electron-builder": "^19.45.5",
+        "elm": "^0.18.0",
+        "elm-analyse": "^0.12.1"
+    },
+    "build": {
+        "appId": "it.emilianobovetti.herb",
+        "files": [
+            "electron.js",
+            "build",
+            "web"
+        ],
+        "linux": {
+            "target": [
+                {
+                    "target": "AppImage",
+                    "arch": [
+                        "x64",
+                        "ia32"
+                    ]
+                }
+            ]
+        },
+        "win": {
+            "target": [
+                {
+                    "target": "portable"
+                }
+            ]
+        }
+    }
+}
