@@ -14,7 +14,7 @@
         "pack": "./node_modules/.bin/electron-builder --dir"
     },
     "dependencies": {
-        "pouchdb": "^6.3.4",
+        "pouchdb": "^7.0.0",
         "purecss": "^1.0.0",
         "stateless-maybe-js": "^1.0.2"
     },
